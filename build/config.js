@@ -1,6 +1,4 @@
 var path = require('path');
-const time = new Date().getTime();
-
 module.exports = {
     entry: {
         main: {
@@ -13,9 +11,9 @@ module.exports = {
             // NODE_ENV: '"development"'
             NODE_ENV: '"production"'
         },
-        index: path.resolve(__dirname, `../release-${time}/`),
+        index: path.resolve(__dirname, `../dist`),
         // 编译输出的静态资源根路径
-        assetsRoot: path.resolve(__dirname, `../release-${time}`),
+        assetsRoot: path.resolve(__dirname, `../dist`),
         devtool: 'cheap-module-source-map',
         // 编译输出的二级目录
         assetsSubDirectory: 'assets',
