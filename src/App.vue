@@ -18,7 +18,9 @@
                     <div class='content'>
                         <div class='page-container'>
                             <div class='scroller' :class='{sec: !$store.state.subView}'>
-                                <component :is='router'></component>
+                                <transition name='opacity-transition' mode="out-in">
+                                    <component :is='router'></component>
+                                </transition>
                             </div>
                         </div>
                         <div class='bar' :class='{sec: $store.state.subView}'>
@@ -71,11 +73,16 @@ export default {
             this.coverClose = true
         },
         enterRoute(route) {
-            this.router = route
-            this.$store.state.subView && this.$store.dispatch('subView')
+            const subView = this.$store.state.subView
+            if(subView) {
+                this.$store.dispatch('subView')
+                setTimeout(() => {
+                    this.router = route
+                }, 150)
+            } else {
+                this.router = route
+            }
         }
     }
 }
 </script>
-<style>
-</style>

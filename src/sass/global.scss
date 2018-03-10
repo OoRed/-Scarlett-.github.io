@@ -75,6 +75,19 @@ body {
     opacity: 0;
 }
 
+.opacity-transition-enter-active {
+    transition: all .3s ease;
+}
+
+.opacity-transition-leave-active {
+    transition: all .3s ease;
+}
+
+.opacity-transition-enter,
+.opacity-transition-leave-to {
+    opacity: 0;
+}
+
 .wrapper {
     width: 80%;
     height: 80%;
