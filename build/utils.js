@@ -6,7 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 
 // 资源路径
-exports.assetsPath = function (_path) {
+exports.assetsPath = function(_path) {
     const assetsSubDirectory = process.env.NODE_ENV === 'production' ?
         config.build.assetsSubDirectory :
         process.env.NODE_ENV === 'testing' ?
@@ -17,7 +17,7 @@ exports.assetsPath = function (_path) {
 }
 
 // 生成css的loader配置
-exports.cssLoaders = function (options = {}) {
+exports.cssLoaders = function(options = {}) {
     /**
      * 官方的
      */
@@ -42,15 +42,16 @@ exports.cssLoaders = function (options = {}) {
                 resources: [path.resolve(__dirname, '../src/sass/variable.scss')]
             }
         };
+
     function generateLoaders(loader, loaderOptions) {
         var loaders = [cssLoader, postcssLoader]
-        if(loader) {
+        if (loader) {
             loaders.push({
                 loader: loader + '-loader',
                 options: Object.assign({}, loaderOptions, { sourceMap: options.sourceMap })
             })
         }
-        if(options.extract) {
+        if (options.extract) {
             return ExtractTextPlugin.extract({
                 use: loaders,
                 fallback: 'vue-style-loader'
@@ -71,10 +72,10 @@ exports.cssLoaders = function (options = {}) {
 }
 
 // 用于生产webpack的rules
-exports.styleLoaders = function (options) {
+exports.styleLoaders = function(options) {
     var output = []
     var loaders = exports.cssLoaders(options)
-    for(var extension in loaders) {
+    for (var extension in loaders) {
         var loader = loaders[extension]
         output.push({
             test: new RegExp('\\.' + extension + '$'),
@@ -87,11 +88,11 @@ exports.styleLoaders = function (options) {
 var isProduction = process.env.NODE_ENV === 'production';
 
 // 生成多页
-exports.HtmlCreator = function (options) {
+exports.HtmlCreator = function(options) {
     return new HtmlWebpackPlugin({
         title: options.title || '',
-        filename: (isProduction ? config.build.index : config.test.index) + `/${options.chunkName}.html`,
-        template: options.tmpl || './index.html',
+        filename: `index.html`,
+        template: options.tmpl || 'src/index.html',
         inject: true,
         minify: {
             removeComments: true,

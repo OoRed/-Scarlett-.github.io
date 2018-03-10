@@ -11,9 +11,9 @@ module.exports = {
             // NODE_ENV: '"development"'
             NODE_ENV: '"production"'
         },
-        index: path.resolve(__dirname, `../dist`),
+        index: path.resolve(__dirname, `../`),
         // 编译输出的静态资源根路径
-        assetsRoot: path.resolve(__dirname, `../dist`),
+        assetsRoot: path.resolve(__dirname, `../`),
         devtool: 'cheap-module-source-map',
         // 编译输出的二级目录
         assetsSubDirectory: 'assets',
