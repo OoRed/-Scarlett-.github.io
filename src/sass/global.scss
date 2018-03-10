@@ -9,7 +9,9 @@ body {
     padding: 0;
     background-image: url("../assets/bg-red.png");
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
+    min-width: 1120px;
+    min-height: 640px;
     color: #fff;
 }
 
