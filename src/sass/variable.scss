@@ -1,0 +1,28 @@
+$bg-color: #aa3737;
+$bg-color-light: #ffc9c9;
+@mixin border-percent($a) {
+    border-top-left-radius: $a 100%;
+    border-bottom-left-radius: $a 100%;
+    border-top-right-radius: $a 100%;
+    border-bottom-right-radius: $a 100%;
+}
+
+@mixin margin($direction, $num, $important:false) {
+    @if $important {
+        margin-#{$direction}: $num+px !important;
+    }
+    @else {
+        margin-#{$direction}: $num+px;
+    }
+}
+
+@mixin h($num, $important:false) {
+    @if $important {
+        height: $num+px !important;
+        line-height: $num+px !important;
+    }
+    @else {
+        height: $num+px;
+        line-height: $num+px;
+    }
+}

@@ -1,0 +1,81 @@
+$mRight: 5 8 10 14 20;
+@each $m in $mRight {
+    .mr#{$m} {
+        @include margin('right', $m);
+    }
+}
+
+// mt*
+$mTop: 5 10 40 20;
+@each $m in $mTop {
+    .mt#{$m} {
+        @include margin('top', $m);
+    }
+}
+
+// ml*
+$mLeft: 5 10 20;
+@each $m in $mLeft {
+    .ml#{$m} {
+        @include margin('left', $m);
+    }
+}
+
+// h*
+$hArr: 20 24 26 28 30 32;
+@each $h in $hArr {
+    .h#{$h} {
+        @include h($h, true);
+    }
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.flex-grow {
+    flex: 1 1 auto;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+.tac {
+    text-align: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
