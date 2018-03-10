@@ -19,7 +19,6 @@ bower_components/
 node_modules/
 
 # 打包构建的文件
-dist
 release/
 release-*/
 test-build/
