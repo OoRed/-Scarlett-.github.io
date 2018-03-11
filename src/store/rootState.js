@@ -4,7 +4,7 @@ export default {
         uname: 'Scarlett Xie',
         university: '广东外语外贸大学',
         education: '2016届毕业生',
-        title: 'UI 设计师',
+        title: '平面设计师',
         locate: '坐标: 广州',
         subView: 0
     },

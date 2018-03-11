@@ -20,17 +20,17 @@
                 <div class='work-info tac'>
                     <div class='title'>工作经历</div>
                     <div class='entertainment'>
-                        广州易方信息科技股份有限公司 - UI设计师
+                        广州易方信息科技股份有限公司 - 平面设计师
                     </div>
                     <div class='date'>
                         (2016.05 - 至今)
                     </div>
                 </div>
                 <ul class='work-list'>
-                    <li>1.负责营销活动专题页面,各节假日banner的设计</li>
+                    <li>1.负责营销活动专题页面，各节假日banner的设计</li>
                     <li>2.负责多场线下展会和沙龙活动的物料设计</li>
-                    <li>3.参与官网改版, 负责插图及部分专题页设计</li>
-                    <li>4.参与产品改版,负责播放器皮肤设计及部分客户的定制需求设计</li>
+                    <li>3.参与官网改版，负责插图及部分专题页设计</li>
+                    <li>4.参与产品改版，负责播放器皮肤设计及部分客户的定制需求设计</li>
                 </ul>
             </div>
         </div>

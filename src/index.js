@@ -7,12 +7,11 @@ import createRouter from 'js/createRouter'
 import App from 'App.vue'
 // 引入全局state
 import rootState from 'store/rootState'
-import 'js/registerComponent'
 import 'sass/global'
 /** route */
 import baseRoute from 'router/baseRoute'
 vue.use(Vuex)
-// store
+    // store
 const { state, mutations, actions, getters } = rootState
 // 路由
 const router = createRouter(baseRoute)

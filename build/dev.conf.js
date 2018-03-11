@@ -24,10 +24,10 @@ module.exports = merge(baseWebpackConfig, {
         new webpack.NoEmitOnErrorsPlugin(),
         new FriendlyErrorsPlugin(),
         new HtmlWebpackPlugin({
-            template: './index.html',
+            template: 'src/index.html',
             filename: 'index.html',
             inject: true,
-            chunks: ['vendors', 'main']
+            chunks: ['vendors', 'index']
         }),
         new ExtractTextPlugin({
             filename: utils.assetsPath('css/[name].[contenthash].css'),

@@ -7,7 +7,7 @@
     "license": "MIT",
     "scripts": {
         "build": "cross-env NODE_ENV=production webpack --progress --hide-modules --colors --config=build/prod.conf.js",
-        "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --quiet --config=./build/dev.conf.js --host localhost --port 8080",
+        "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --config=./build/dev.conf.js --host localhost --port 8080",
         "lint": "eslint --ext .js,.vue,.jsx --ignore-pattern [vendor] src",
         "lint-fix": "eslint --fix --ext .js,.vue,.jsx --ignore-pattern [vendor] src"
     },

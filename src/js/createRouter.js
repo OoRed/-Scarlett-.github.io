@@ -11,22 +11,27 @@ import VueRouter from 'vue-router'
 export default function(array) {
     const routes = array || []
     Vue.use(VueRouter)
-    // 创建router
+        // 创建router
     const router = new VueRouter({
-        mode: 'history',
-        routes,
-        scrollBehavior(to, from, savedPosition) {
-            if(savedPosition) {
-                return savedPosition
+            mode: 'history',
+            linkActiveClass: 'active',
+            routes,
+            scrollBehavior(to, from, savedPosition) {
+                if(savedPosition) {
+                    return savedPosition
+                }
+                return { x: 0, y: 0 }
             }
-            return { x: 0, y: 0 }
-        }
-    })
-    /**
-     * 设置beforeEach钩子
-     */
+        })
+        /**
+         * 设置beforeEach钩子
+         */
     router.beforeEach((to, from, next) => {
         // doSomething
+        to.matched.forEach((record) => {
+            const title = record.meta.title;
+            document.title = title;
+        })
         next()
     })
     router.afterEach(() => {

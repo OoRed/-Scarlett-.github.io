@@ -1,5 +1,6 @@
 $bg-color: #aa3737;
 $bg-color-light: #ffc9c9;
+$base-color: #aa3737;
 @mixin border-percent($a) {
     border-top-left-radius: $a 100%;
     border-bottom-left-radius: $a 100%;

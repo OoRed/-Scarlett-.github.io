@@ -1,9 +1,9 @@
 var path = require('path');
 module.exports = {
     entry: {
-        main: {
-            path: './src/main',
-            title: 'main'
+        index: {
+            path: './src/index',
+            title: 'scarlett'
         }
     },
     build: {

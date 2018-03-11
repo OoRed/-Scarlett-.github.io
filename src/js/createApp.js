@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import 'http' // 初始化http
-import { HttpRoot, isProduction } from 'js/ConstValue.js'
 /**
  * 构建vue实例
  *
@@ -13,10 +12,8 @@ import { HttpRoot, isProduction } from 'js/ConstValue.js'
  */
 export default function(router, store, app, element) {
     // 配置Vue调试工具
-    Vue.config.devtools = !isProduction
-    // 将httpRoot挂在vue上
-    Vue.prototype.$httpRoot = HttpRoot
-    // 返回构建完成的vue实例
+    Vue.config.devtools = true
+        // 返回构建完成的vue实例
     return new Vue({
         router,
         store,

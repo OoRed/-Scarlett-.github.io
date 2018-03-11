@@ -3,7 +3,7 @@
         <div class='page flex ending justify-center align-center column'>
             <div>
                 因为热爱，所以追逐。<br>
-                设计如实，生活如实。<br>
+                设计如是，生活如是。<br>
                 <span class='en'>
                     Thanks for watching.
                 </span>

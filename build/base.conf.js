@@ -21,9 +21,9 @@ module.exports = {
     },
     // require 解析
     resolve: {
-        extensions: ['.js','.vue',
-                    '.scss','.css'
-                    ], // 当require找不到模块添加后缀
+        extensions: ['.js', '.vue',
+            '.scss', '.css'
+        ], // 当require找不到模块添加后缀
         modules: [
             path.join(__dirname, '../src'),
             'node_modules'
@@ -45,29 +45,26 @@ module.exports = {
         }
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.vue$/,
-                use: [
-                    {
-                        loader: 'vue-loader',
-                        options: {
-                            loaders: utils.cssLoaders({
-                                sourceMap: isProduction ?
-                                    config.build.productionSourceMap : config.dev.cssSourceMap,
-                                extract: isProduction ?
-                                    config.build.extract : config.dev.extract
-                            }),
-                            preserveWhitespace: false,
-                            transformToRequire: {
-                                video: 'src',
-                                source: 'src',
-                                img: 'src',
-                                image: 'xlink:href'
-                            }
+                use: [{
+                    loader: 'vue-loader',
+                    options: {
+                        loaders: utils.cssLoaders({
+                            sourceMap: isProduction ?
+                                config.build.productionSourceMap : config.dev.cssSourceMap,
+                            extract: isProduction ?
+                                config.build.extract : config.dev.extract
+                        }),
+                        preserveWhitespace: false,
+                        transformToRequire: {
+                            video: 'src',
+                            source: 'src',
+                            img: 'src',
+                            image: 'xlink:href'
                         }
                     }
-                ]
+                }]
             },
             {
                 test: /\.js$/,
@@ -82,7 +79,7 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                use: [ "html-loader" ]
+                use: ["html-loader"]
             },
             {
                 test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

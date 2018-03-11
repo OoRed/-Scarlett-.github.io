@@ -91,8 +91,8 @@ var isProduction = process.env.NODE_ENV === 'production';
 exports.HtmlCreator = function(options) {
     return new HtmlWebpackPlugin({
         title: options.title || '',
-        filename: `index.html`,
-        template: options.tmpl || 'src/index.html',
+        filename: 'index.html',
+        template: './src/index.html',
         inject: true,
         minify: {
             removeComments: true,
