@@ -6,34 +6,22 @@ const four = r => require.ensure([], () => r(require('components/four')), 'four'
 const route = [{
         path: '/',
         name: 'activate',
-        component: first,
-        meta: {
-            title: '营销活动页'
-        }
+        component: first
     },
     {
         path: 'festival',
         name: 'festival',
-        component: sec,
-        meta: {
-            title: ' 节假日壁纸'
-        }
+        component: sec
     },
     {
         path: 'other',
         name: 'other',
-        component: third,
-        meta: {
-            title: '其他 UI'
-        }
+        component: third
     },
     {
         path: 'daily',
         name: 'daily',
-        component: four,
-        meta: {
-            title: '蜜汁日常'
-        }
+        component: four
     },
     {
         path: '*',

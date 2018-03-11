@@ -27,11 +27,6 @@ export default function(array) {
          * 设置beforeEach钩子
          */
     router.beforeEach((to, from, next) => {
-        // doSomething
-        to.matched.forEach((record) => {
-            const title = record.meta.title;
-            document.title = title;
-        })
         next()
     })
     router.afterEach(() => {
